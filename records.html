@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imported Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Imported Records</h1>
+    <table>
+        <thead>
+            <tr><th>ID</th><th>Name</th><th>Roll Number</th><th>Department</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+        {% for row in records %}
+            <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.roll_number }}</td>
+                <td>{{ row.department }}</td>
+                <td>{{ row.email }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a class="link" href="/">← Back to Import</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Data using Transform Maps</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Import Data using Transform Maps</h1>
+    <p class="subtitle">Spreadsheet Data Import System</p>
+
+    <div class="map-card">
+        <h2>Transform Map</h2>
+        <p>Student Name <span>→</span> Name</p>
+        <p>Roll No <span>→</span> Roll Number</p>
+        <p>Department <span>→</span> Department</p>
+        <p>Email <span>→</span> Email</p>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label for="spreadsheet">Select Spreadsheet</label>
+        <input id="spreadsheet" type="file" name="spreadsheet" accept=".csv,.xlsx" required>
+        <button type="submit">Import &amp; Transform</button>
+    </form>
+
+    {% if message %}
+    <div class="message">{{ message }}</div>
+    {% endif %}
+
+    {% if records %}
+    <h2>Imported Data</h2>
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Roll Number</th><th>Department</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+        {% for row in records %}
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.roll_number }}</td>
+                <td>{{ row.department }}</td>
+                <td>{{ row.email }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    <a class="link" href="/records">View all imported records</a>
+</div>
+</body>
+</html>

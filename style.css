@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    margin: 0;
+    padding: 35px;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #cfd5dc;
+}
+
+h1 { color: #0b57d0; margin-top: 0; }
+.subtitle { color: #555; }
+
+.map-card {
+    background: #eef5ff;
+    border-left: 5px solid #0b57d0;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.map-card p { margin: 8px 0; }
+.map-card span { font-weight: bold; color: #0b57d0; }
+
+form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input[type="file"] { display: block; margin: 12px 0; }
+
+button {
+    background: #0b57d0;
+    color: #fff;
+    border: 0;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.message {
+    margin: 18px 0;
+    padding: 12px;
+    background: #e8f5e9;
+    border-radius: 6px;
+}
+
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+th { background: #e8eef8; }
+.link { display: inline-block; margin-top: 20px; color: #0b57d0; text-decoration: none; font-weight: bold; }
